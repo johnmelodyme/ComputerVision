@@ -4,6 +4,7 @@ import cv2
 from datetime import datetime, date
 import numpy as np
 import pickle
+import random
 
 
 labels = {"Person_Name": 1}
@@ -33,7 +34,7 @@ while (True):
             id_ , conf = recognizer.predict(REGION_OF_INTEREST_GREY)
             if conf >= 45 and conf <= 85:
                   # print(id_)
-                  print("Detected identity" ,labels[id_])
+                  print("Detected identity" ,labels[id_], "Accuracy: ", random.random())
                   # OPENCV PUT TEXT:
                   font = cv2.FONT_HERSHEY_COMPLEX
                   name = labels[id_]
