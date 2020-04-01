@@ -14,6 +14,7 @@ IMAGE_DATABASE_DIRECTORY = Machine.path.join(BASE_DIRECTORY, "model")
 # Recognizer :
 recognizer = cv2.face.LBPHFaceRecognizer_create() #pip3 install opencv-contrib-python --user
 
+
 CURRENT_IDENTICATION = 0
 LABEL_ID = {}
 y_labels = []
@@ -52,6 +53,6 @@ print(x_train)
 with open("labels.pickle", "wb") as file:
       pickle.dump(LABEL_ID, file)
 
-trainingFileName = "fc_training.yml"
 recognizer.train(x_train, np.array(y_labels))
-recognizer.save(trainingFileName)
+recognizer.save("training.yml")
+# print(recognizer)
