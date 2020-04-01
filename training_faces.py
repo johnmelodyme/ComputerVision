@@ -1,5 +1,21 @@
 #!/usr/bin/env python
-# John Melody Me
+#              Copyright 2020 © John Melody Melissa
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#             http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# @Author : John Melody Melissa
+# @Copyright: John Melody Melissa & Tan Sin Dee © Copyright 2020
+# @INPIREDBYGF: Cindy Tan Sin Dee <3
+# @Project: FacialRecognition.py
 import cv2
 import os as Machine
 from PIL import Image
@@ -36,6 +52,9 @@ for root, dirs, files in Machine.walk(IMAGE_DATABASE_DIRECTORY):
                   # y_labels.append(label)
                   # x_train.append(path) # Very this and Convert into numpy array, Grey
                   pil_image = Image.open(path).convert("L") # greyscaled
+                  #Resizing:
+                  # size = (550, 550)
+                  # final_img = pil_image.resize(size, Image.ANTIALIAS)
                   image_array = np.array(pil_image, "uint8")
                   print(image_array)
                   face = faces_cascades.detectMultiScale(image_array, scaleFactor=1.5, minNeighbors=5)

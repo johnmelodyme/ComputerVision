@@ -1,10 +1,28 @@
 #!/usr/bin/env python
-# John Melody Me
+#              Copyright 2020 © John Melody Melissa
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#             http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+# @Author : John Melody Melissa
+# @Copyright: John Melody Melissa & Tan Sin Dee © Copyright 2020
+# @INPIREDBYGF: Cindy Tan Sin Dee <3
+# @Project: FacialRecognition.py
+
 import cv2
 from datetime import datetime, date
 import numpy as np
 import pickle
 import random
+import os as Machine
 
 
 labels = {"Person_Name": 1}
@@ -20,6 +38,10 @@ capture = cv2.VideoCapture(0)
 # print(capture)
 # print(capture.read())
 title = "Facial Recognition"
+
+def trainTheModel():
+      Machine.system("python training_faces.py")
+
 #Capture Frame by Frame
 while (True):
       ret, frame = capture.read()
