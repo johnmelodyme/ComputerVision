@@ -20,6 +20,9 @@ while (True):
             print(x, y, w, h)
             REGION_OF_INTEREST_GREY = grey[y:y+h, x:x+w] # Location Of the Face for Grey
             REGION_OF_INTEREST_COLOURED = frame[y:y+h, x:x+w] # Location Of the Face for Coloured
+            # Recognizer :
+            
+
             img_item = "exported_data/face.png"
             cv2.imwrite(img_item, REGION_OF_INTEREST_GREY)
             Colour = (255, 0, 0)
