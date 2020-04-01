@@ -12,7 +12,7 @@ IMAGE_DATABASE_DIRECTORY = Machine.path.join(BASE_DIRECTORY, "model")
 # print(IMAGE_DATABASE_DIRECTORY)
 
 # Recognizer :
-recognizer = cv2.face.LBPHFaceRecognizer_create()
+recognizer = cv2.face.LBPHFaceRecognizer_create() #pip3 install opencv-contrib-python --user
 
 CURRENT_IDENTICATION = 0
 LABEL_ID = {}
