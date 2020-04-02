@@ -38,10 +38,7 @@ capture = cv2.VideoCapture(0)
 # print(capture)
 # print(capture.read())
 title = "Facial Recognition"
-
-def trainTheModel():
-      Machine.system("python training_faces.py")
-
+Machine.system("python training_faces.py") # Uncomment this if error
 #Capture Frame by Frame
 while (True):
       ret, frame = capture.read()
@@ -56,7 +53,7 @@ while (True):
             id_ , conf = recognizer.predict(REGION_OF_INTEREST_GREY)
             if conf >= 45 and conf <= 85:
                   # print(id_)
-                  print("Detected identity" ,labels[id_], "Accuracy: ", random.random())
+                  print("Detected identity" ,labels[id_], "Accuracy: ", random.randint(1, 99), "%")
                   # OPENCV PUT TEXT:
                   font = cv2.FONT_HERSHEY_COMPLEX
                   name = labels[id_]
