@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#
 #              Copyright 2020 © John Melody Me
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,11 +27,8 @@ faces_cascades = cv2.CascadeClassifier("cascades/data/haarcascade_frontalface_al
 BASE_DIRECTORY = Machine.path.dirname(Machine.path.abspath(__file__))
 IMAGE_DATABASE_DIRECTORY = Machine.path.join(BASE_DIRECTORY, "model")
 # print(IMAGE_DATABASE_DIRECTORY)
-
 # Recognizer :
 recognizer = cv2.face.LBPHFaceRecognizer_create() #pip3 install opencv-contrib-python --user
-
-
 CURRENT_IDENTICATION = 0
 LABEL_ID = {}
 y_labels = []
