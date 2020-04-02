@@ -24,7 +24,6 @@ import pickle
 import random
 import os as Machine
 
-
 labels = {"Person_Name": 1}
 faces_cascades = cv2.CascadeClassifier("cascades/data/haarcascade_frontalface_alt2.xml")
 # Recognizer :
