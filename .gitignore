@@ -1,1 +1,3 @@
-./face.png
+# Ignore Mac system files
+.DS_store
+/exported_data/face.png
