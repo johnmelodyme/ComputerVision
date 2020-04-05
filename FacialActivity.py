@@ -16,7 +16,6 @@
 # @Copyright: John Melody Me & Tan Sin Dee © Copyright 2020
 # @INPIREDBYGF: Cindy Tan Sin Dee <3
 # @Project: FacialRecognition.py
-
 import cv2
 from datetime import datetime, date
 import numpy as np
@@ -34,10 +33,10 @@ with open("labels.pickle", "rb") as file:
       labels = {v:k for k, v in old_labels.items()}
 # CV2 Config:
 capture = cv2.VideoCapture(0)
-# print(capture)
-# print(capture.read())
+print(capture)
+print(capture.read())
 title = "Facial Recognition"
-Machine.system("python training_faces.py") # Uncomment this if error
+# Machine.system("python training_faces.py") # Uncomment this if error
 #Capture Frame by Frame
 while (True):
       ret, frame = capture.read()
@@ -51,7 +50,7 @@ while (True):
             # Prediction:
             id_ , conf = recognizer.predict(REGION_OF_INTEREST_GREY)
             if conf >= 45 and conf <= 85:
-                  # print(id_)
+                  print(id_)
                   print("Detected identity" ,labels[id_], "Accuracy: ", random.randint(1, 99), "%")
                   # OPENCV PUT TEXT:
                   font = cv2.FONT_HERSHEY_COMPLEX
