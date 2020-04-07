@@ -29,7 +29,6 @@ IMAGE_DATABASE_DIRECTORY = Machine.path.join(BASE_DIRECTORY, "model")
 # print(IMAGE_DATABASE_DIRECTORY)
 # Recognizer :
 recognizer = cv2.face.LBPHFaceRecognizer_create() #pip3 install opencv-contrib-python --user
-
 CURRENT_IDENTICATION = 0
 LABEL_ID = {}
 y_labels = []
@@ -57,7 +56,6 @@ for root, dirs, files in Machine.walk(IMAGE_DATABASE_DIRECTORY):
                   image_array = np.array(pil_image, "uint8")
                   print(image_array)
                   face = faces_cascades.detectMultiScale(image_array, scaleFactor=1.5, minNeighbors=5)
-
                   for (x, y, w, h) in face:
                         ROI = image_array[y:y+h, x:x+w]
                         x_train.append(ROI)
@@ -70,7 +68,6 @@ print(x_train)
 
 with open("labels.pickle", "wb") as file:
       pickle.dump(LABEL_ID, file)
-
 recognizer.train(x_train, np.array(y_labels))
 recognizer.save("training.yml")
-# print(recognizer)
+print(recognizer)
