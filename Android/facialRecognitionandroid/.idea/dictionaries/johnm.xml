@@ -3,8 +3,11 @@
     <words>
       <w>autofocus</w>
       <w>facialrecognition</w>
+      <w>frontalface</w>
+      <w>haarcascade</w>
       <w>johnmelodyme</w>
       <w>kylogger</w>
+      <w>lbpcascade</w>
       <w>machinelearning</w>
     </words>
   </dictionary>
