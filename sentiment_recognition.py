@@ -25,19 +25,19 @@ import pickle
 import random
 import os as Machine
 
-labels = {"Person_Name": 1}
+labels = {"Sentiment": 1}
 faces_cascades = cv2.CascadeClassifier("cascades/data/haarcascade_frontalface_alt2.xml")
 # Recognizer :
 recognizer = cv2.face.LBPHFaceRecognizer_create() #pip3 install opencv-contrib-python --user
-recognizer.read("training.yml")
-with open("labels.pickle", "rb") as file:
+recognizer.read("training_emotion.yml")
+with open("labels_emo.pickle", "rb") as file:
       old_labels = pickle.load(file)
       labels = {v:k for k, v in old_labels.items()}
 # CV2 Config:
 capture = cv2.VideoCapture(0)
 print(capture.read())
 print(Copyright)
-title = "Facial Recognition"
+title = "Sentiment Analysis"
 # Machine.system("python training_faces.py") # Uncomment this if error
 #Capture Frame by Frame
 while (True):
@@ -53,14 +53,14 @@ while (True):
             id_ , conf = recognizer.predict(REGION_OF_INTEREST_GREY)
             if conf >= 45 and conf <= 85:
                   # print(id_)
-                  print("Detected identity" ,labels[id_], "Accuracy: ", random.randint(1, 99), "%")
+                  print("Sentiment Analysis - " ,labels[id_], "Accuracy: ", random.randint(1, 99), "%")
                   # OPENCV PUT TEXT:
                   font = cv2.FONT_HERSHEY_COMPLEX
                   name = labels[id_]
                   COLOUR = (255, 255, 255)
                   stroke = 2
                   cv2.putText(frame, name, (x, y), font, 1, COLOUR, stroke, cv2.LINE_AA)
-            img_item = "exported_data/recognition/face.png"
+            img_item = "exported_data/emotion/face.png"
             cv2.imwrite(img_item, REGION_OF_INTEREST_GREY)
             Colour = (255, 0, 0)
             Stroke = 2
