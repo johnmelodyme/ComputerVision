@@ -1,3 +1,0 @@
-rootProject.name='FacialRecognition'
-include ':app'
-include ':opencvsdkandroid'
