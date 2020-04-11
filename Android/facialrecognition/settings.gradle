@@ -1,7 +1,0 @@
-rootProject.name='FacialRecognition'
-include ':app'
-include ':java'
-include ':opencvsdkandroid'
-include ':opencvsdkandroid'
-include ':opencvsdkandroid'
-include ':OpenCvSDK'
