@@ -70,4 +70,5 @@ with open("labels_emo.pickle", "wb") as file:
       pickle.dump(LABEL_ID, file)
 recognizer.train(x_train, np.array(y_labels))
 recognizer.save("training_emotion.yml")
+# recognizer.save()
 print(recognizer)

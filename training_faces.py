@@ -71,4 +71,5 @@ with open("labels.pickle", "wb") as file:
       pickle.dump(LABEL_ID, file)
 recognizer.train(x_train, np.array(y_labels))
 recognizer.save("training.yml")
+recognizer.save("training.pt")
 print(recognizer)
