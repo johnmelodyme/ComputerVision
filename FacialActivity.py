@@ -20,7 +20,6 @@ Copyright = """
 import cv2
 from datetime import datetime, date
 import numpy as np
-import matplotlib.pyplot as plt
 import pickle
 import random
 import os as Machine
@@ -71,8 +70,6 @@ while (True):
             cv2.rectangle(frame, (x, y), (END_CORD_X, END_CORD_Y), Colour, Stroke)
       #Display Result Frame:
       cv2.imshow(title, frame)
-      # plt.plot(capture.read())
-      # plt.show()
       if cv2.waitKey(20) & 0xFF == ord("q"):
             break
 # When Everything's done, Release:
