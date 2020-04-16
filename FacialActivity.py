@@ -25,6 +25,7 @@ import pickle
 import random
 import os as Machine
 
+f = open("output.txt", "a")
 labels = {"Person_Name": 1}
 faces_cascades = cv2.CascadeClassifier("cascades/data/haarcascade_frontalface_alt2.xml")
 # Recognizer :
@@ -37,7 +38,7 @@ with open("labels.pickle", "rb") as file:
 capture = cv2.VideoCapture(0)
 print(capture.read())
 print(Copyright)
-title = "Facial Recognition"
+title = "Facial Recognition -John Melody-"
 # Machine.system("python training_faces.py") # Uncomment this if error
 #Capture Frame by Frame
 while (True):
@@ -46,7 +47,7 @@ while (True):
       grey = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
       faces = faces_cascades.detectMultiScale(grey, scaleFactor=1.5, minNeighbors=5)
       for (x, y, w, h) in faces:
-            # print(x, y, w, h)
+            print(x, y, w, h)
             REGION_OF_INTEREST_GREY = grey[y:y+h, x:x+w] # Location Of the Face for Grey
             REGION_OF_INTEREST_COLOURED = frame[y:y+h, x:x+w] # Location Of the Face for Coloured
             # Prediction:
@@ -54,6 +55,7 @@ while (True):
             if conf >= 45 and conf <= 85:
                   # print(id_)
                   print("Detected identity" ,labels[id_], "Accuracy: ", random.randint(1, 99), "%")
+                  f.write("Detected identity" ,labels[id_], "Accuracy: ", random.randint(1, 99), "%", "\n")
                   # OPENCV PUT TEXT:
                   font = cv2.FONT_HERSHEY_COMPLEX
                   name = labels[id_]
@@ -74,5 +76,6 @@ while (True):
       if cv2.waitKey(20) & 0xFF == ord("q"):
             break
 # When Everything's done, Release:
+f.close()
 capture.Release()
 cv2.destroyAllWindows()

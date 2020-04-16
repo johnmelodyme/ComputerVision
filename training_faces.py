@@ -37,7 +37,7 @@ x_train = []
 
 for root, dirs, files in Machine.walk(IMAGE_DATABASE_DIRECTORY):
       for file in files:
-            if file.endswith("jpg") or file.endswith("png"): # Prefered (.png)
+            if file.endswith("jpg") or file.endswith("png") or file.endswith(".jiff"): # Prefered (.png)
                   path = Machine.path.join(root, file)
                   label = Machine.path.basename(Machine.path.dirname(path)).replace(" ","-").upper()
                   print(label, path)
