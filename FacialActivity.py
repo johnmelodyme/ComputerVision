@@ -55,7 +55,6 @@ while (True):
             if conf >= 45 and conf <= 85:
                   # print(id_)
                   print("Detected identity" ,labels[id_], "Accuracy: ", random.randint(1, 99), "%")
-                  f.write("Detected identity" ,labels[id_], "Accuracy: ", random.randint(1, 99), "%", "\n")
                   # OPENCV PUT TEXT:
                   font = cv2.FONT_HERSHEY_COMPLEX
                   name = labels[id_]
@@ -63,6 +62,7 @@ while (True):
                   stroke = 2
                   cv2.putText(frame, name, (x, y), font, 1, COLOUR, stroke, cv2.LINE_AA)
             img_item = "exported_data/recognition/face.png"
+            # f.write("Detected identity" ,labels[id_], "Accuracy: ", random.randint(1, 99), "%")
             cv2.imwrite(img_item, REGION_OF_INTEREST_GREY)
             Colour = (255, 0, 0)
             Stroke = 2
