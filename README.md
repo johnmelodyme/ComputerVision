@@ -1,4 +1,4 @@
-# FacialRecognition
+# Facial Recognition
 "A Simple Facial Recognition Programme" ❤️
 
 
