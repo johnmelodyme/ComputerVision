@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Facial Recognition
+=======
+# Facial Recognition 
+>>>>>>> b86bd7457bac396fb5b9069c80d247ae3fa11eb5
 "A Simple Facial Recognition Programme" ❤️
 
 
