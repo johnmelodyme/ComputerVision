@@ -38,7 +38,7 @@ capture = cv2.VideoCapture(0)
 print(capture.read())
 print(Copyright)
 title = "Facial Recognition -John Melody-"
-# Machine.system("python training_faces.py") # Uncomment this if error
+# Machine.system("python training_faces.py") # Uncomment this if e rror
 #Capture Frame by Frame
 while (True):
       ret, frame = capture.read()
