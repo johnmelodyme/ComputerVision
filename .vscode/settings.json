@@ -1,4 +1,4 @@
 {
       "java.configuration.updateBuildConfiguration": "automatic",
-      "python.pythonPath": "C:\\Users\\johnm\\AppData\\Local\\Programs\\Python\\Python37\\python.exe"
+      "python.pythonPath": "/usr/local/bin/python3"
 }
