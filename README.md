@@ -1,9 +1,11 @@
-<<<<<<< HEAD
+
 # Facial Recognition
-=======
-# Facial Recognition 
->>>>>>> b86bd7457bac396fb5b9069c80d247ae3fa11eb5
+
 "A Simple Facial Recognition Programme" ❤️
+
+Execution:
+
+``` make run``` <-- make sure the model is configured before executing
 
 
 [![](https://github.com/johnmelodyme/FacialRecognition/blob/master/screens/screen.png)](http://www.youtube.com/watch?v=hYVFFeeb9rE "Click The Image To Watch The Demo in Youtube")
