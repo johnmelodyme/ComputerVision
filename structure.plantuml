@@ -1,0 +1,10 @@
+@startuml Facial-Recognition
+start
+
+if (camera.Available();) then (Yes)
+  : proceed;
+else (No)
+  : Show(Message.err("Camera Not Available"));
+endif
+stop
+@enduml

@@ -1,1 +1,6 @@
-./face.png
+# Ignore Mac system files
+.DS_store
+/exported_data/
+/model/Cheng Tze Keong/
+/model/Nooi Mooi Choo/
+/model/Tan Sin Dee/
